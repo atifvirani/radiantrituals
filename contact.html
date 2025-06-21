@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Radiant Rituals</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fefaf5;
+      color: #3a2e2e;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #fff3e6;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #f2e1d9;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #7a6a58;
+    }
+  header, footer {
+      background-color: #fff;
+      border: 1px solid #e0dcd5;
+      padding: 20px 30px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #5c4438;
+      font-weight: bold;
+    }
+
+
+
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    form {
+      background: #fff;
+      padding: 1.5rem;
+      border: 1px solid #e8dcd3;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.3rem;
+      border: 1px solid #d9cfc5;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #fefaf5;
+    }
+
+    button {
+      background-color: #a67c52;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #8c6239;
+    }
+
+    .contact-details {
+      margin-top: 2rem;
+      background-color: #fffdfb;
+      padding: 1.5rem;
+      border-left: 4px solid #a67c52;
+      border-radius: 10px;
+    }
+
+    .contact-details h2 {
+      margin-top: 0;
+    }
+
+    .contact-details a {
+      color: #a67c52;
+      text-decoration: none;
+    }
+
+    .thank-you {
+      display: none;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background-color: #e6ffed;
+      border-left: 4px solid #2e7d32;
+      border-radius: 8px;
+    }
+
+    .thank-you.active {
+      display: block;
+    }
+
+    footer {
+      background-color: #f5ede6;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Afrin Adam</h1>
+    <p>Skincare is a ritual — let's connect and create beauty together.</p>
+  </header>
+  <header>
+    <img src="assets/images/logo.jpg" alt="Radiant Rituals Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+     
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <form action="https://formspree.io/f/xzzgarjd" method="POST">
+      <label>
+        Name:
+        <input type="text" name="name" placeholder="Your Name" required />
+      </label>
+      <label>
+        Email:
+        <input type="email" name="email" placeholder="you@example.com" required />
+      </label>
+      <label>
+        Message:
+        <textarea name="message" placeholder="Write your message..." required></textarea>
+      </label>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="thank-you" id="thankYou">
+      <h3>Thank you for reaching out!</h3>
+      <p>Your message has been sent successfully. We'll get back to you soon.</p>
+    </div>
+
+    <section class="contact-details">
+      <h2>Direct Contact</h2>
+      <p><strong>Name:</strong> Afrin Adam</p>
+      <p><strong>Email:</strong> <a href="mailto:afrinadam365@gmail.com">afrinadam365@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+919337551440">+91 93375 51440</a></p>
+      <p><strong>Instagram:</strong> 
+        <a href="https://www.instagram.com/_ugc.beautybliss_/?igsh=MTUzMXhhbWptZW5zeQ" target="_blank">
+          @_ugc.beautybliss_
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Afrin Adam | Radiant Rituals
+  </footer>
+
+  <script>
+    if (window.location.hash === "#thankyou") {
+      document.getElementById("thankYou").classList.add("active");
+    }
+  </script>
+</body>
+</html>
